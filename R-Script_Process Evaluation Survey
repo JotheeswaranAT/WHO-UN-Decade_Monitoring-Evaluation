@@ -1,1 +1,149 @@
-R script 
+####  STATA script 
+encode BQ1Countryname, gen (n_country)
+encode eqEMROifBQ1NAOKAFG, gen (CODE)
+label variable code "CODE"
+rename code CODE
+gen code = eqEMROifBQ1NAOKAFG
+encode whoregioncode , gen (who_region)
+encode attr_grp_wb_income , gen (wb_income)
+encode attr_sdgregion , gen (sdg_region)
+#################Policy contents
+encode PL4SQ001Pleaseindicatewhet, gen (p_ageism)
+recode p_ageism 1=. 2=0 3=1
+
+encode PL4SQ002Pleaseindicatewhet, gen (p_agediscrim)
+tab p_agediscrim
+tab p_agediscrim
+tab p_agediscrim, nolab
+recode p_agediscrim 1=. 2=0 3=1
+
+
+encode PL4SQ003Pleaseindicatewhet, gen (p_abuse)
+tab p_abuse
+tab p_abuse, nolab
+recode p_abuse 1=. 2=0 3=1
+
+encode PL4SQ004Pleaseindicatewhet, gen (p_rights)
+tab p_rights
+tab p_rights, nolab
+recode p_rights 1=. 2=0 3=1
+
+encode PL4SQ005Pleaseindicatewhet, gen (p_housing)
+tab p_housing 
+tab p_housing, nolab
+recode p_housing 1=. 2=0 3=1
+
+encode PL4SQ006Pleaseindicatewhet, gen (p_agefriendly) 
+tab p_agefriendly
+tab p_agefriendly, nolab
+recode p_agefriendly 1=. 2=0 3=1
+
+encode PL4SQ007Pleaseindicatewhet, gen (p_disaster)
+tab p_disaster
+tab p_disaster, nolab
+recode p_disaster 1=. 2=0  3=1
+
+
+encode PL4SQ008Pleaseindicatewhet, gen (p_biodiversity)
+tab p_biodiversity
+tab p_biodiversity, nolab
+recode p_biodiversity 1=. 2=0  3=1
+
+
+encode PL4SQ009Pleaseindicatewhet, gen (p_transport)
+tab p_transport
+tab p_transport, nolab
+recode p_transport 1=. 2=0  3=1
+
+encode PL4SQ010Pleaseindicatewhet, gen (p_ict)
+tab p_ict
+tab p_ict, nolab
+recode p_ict 1=. 2=0  3=1
+
+encode PL4SQ011Pleaseindicatewhet, gen(p_lifelong)
+tab p_lifelong
+tab p_lifelong, nolab
+recode p_lifelong 1=. 2=0  3=1
+
+encode PL4SQ012Pleaseindicatewhet, gen (p_empower)
+tab p_empower
+tab p_empower, nolab
+recode p_empower 1=. 2=0  3=1
+
+encode PL4SQ013Pleaseindicatewhet, gen (p_socialpart)
+tab p_empower
+tab p_empower, nolab
+recode p_empower 1=. 2=0  3=1
+
+encode PL4SQ014Pleaseindicatewhet, gen (p_loneliness)
+tab p_loneliness
+tab p_loneliness, nolab
+recode p_loneliness 1=. 2=0  3=1
+
+encode PL4SQ015Pleaseindicatewhet, gen (p_compassess)
+tab p_compassess
+tab p_compassess, nolab
+recode p_compassess 1=. 2=0  3=1
+
+encode PL4SQ016Pleaseindicatewhet, gen (p_uhc)
+tab p_uhc
+tab p_uhc, nolab
+recode p_uhc 1=. 2=0  3=1
+
+encode PL4SQ017Pleaseindicatewhet, gen (p_assistive)
+tab p_assistive
+tab p_assistive, nolab
+recode p_assistive 1=. 2=0  3=1
+
+encode PL4SQ018Pleaseindicatewhet, gen (p_rehab)
+tab p_rehab
+tab p_rehab, nolab
+recode p_rehab 1=. 2=0  3=1
+
+encode PL4SQ019Pleaseindicatewhet, gen (p_ltc)
+tab p_ltc
+tab p_ltc, nolab
+recode p_ltc 1=. 2=0  3=1
+
+encode PL4SQ020Pleaseindicatewhet, gen (p_mental)
+tab p_mental
+tab p_mental, nolab
+recode p_mental 1=. 2=0  3=1
+
+encode PL4SQ021Pleaseindicatewhet, gen (p_disease)
+tab p_disease
+tab p_disease, nolab
+recode p_disease 1=. 2=0  3=1
+
+encode PL4SQ022Pleaseindicatewhet, gen (p_palliative)
+tab p_palliative
+tab p_palliative, nolab
+recode p_palliative 1=. 2=0  3=1
+
+
+encode PL4SQ023Pleaseindicatewhet, gen (p_design)
+tab p_design
+tab p_design, nolab
+recode p_design 1=. 2=0  3=1
+
+encode PL4SQ024Pleaseindicatewhet, gen (p_participation) 
+tab p_participation
+tab p_participation, nolab
+recode p_participation 1=. 2=0  3=1
+
+encode PL4SQ025Pleaseindicatewhet, gen (p_income)
+tab p_income
+tab p_income, nolab
+recode p_income 1=. 2=0  3=1
+
+encode PL4SQ026Pleaseindicatewhet, gen (p_socialsec)
+tab p_socialsec
+tab p_socialsec, nolab
+recode p_socialsec 1=. 2=0  3=1
+
+encode PL4SQ027Pleaseindicatewhet, gen (p_refugee)
+tab p_refugee
+tab p_refugee, nolab
+recode p_refugee 1=. 2=0  3=1
+
+****************************************************************************
